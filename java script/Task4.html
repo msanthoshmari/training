@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+   
+        <div class="container">
+            <div class="row" style="height: 200px;">
+                <div class="col-4 border border-dark"></div>
+                <div class="col-2 border border-dark"  id="outn"></div>
+                <div class="col-2 border border-dark"  id="inn"></div>
+                <div class="col-4 border border-dark"></div>
+            </div>
+            <div class="row" style="height: 100px;">
+                <div class="col-4 border border-dark" id="inw"></div>
+                <div class="col-2 border border-dark" id="1"><button class="btn btn-primary" style="padding: 10px; margin: 20px 50px;" onclick="north()">NORTH</button></div>
+                <div class="col-2 border border-dark" id="2"><button class="btn btn-primary" style="padding: 10px; margin: 20px 50px;" onclick="east()">EAST</button></div>
+                <div class="col-4 border border-dark" id="oute"></div>
+            </div>
+            <div class="row" style="height: 100px;" >
+                <div class="col-4 border border-dark" id="outw"></div>
+                <div class="col-2 border border-dark" id="3"><button class="btn btn-primary" style="padding: 10px; margin: 20px 50px;" onclick="west()">WEST</button></div>
+                <div class="col-2 border border-dark" id="4"><button class="btn btn-primary" style="padding: 10px; margin: 20px 50px;" onclick="south()">SOUTH</button></div>
+                <div class="col-4 border border-dark" id="ine"></div>
+            </div>
+            <div class="row" style="height: 200px;">
+                <div class="col-4 border border-dark"></div>
+                <div class="col-2 border border-dark" id="ins"></div>
+                <div class="col-2 border border-dark" id="outs"></div>
+                <div class="col-4 border border-dark"></div>
+            </div>
+        </div>
+        <script>
+            function resetSignal() {
+                document.getElementById("ine").style.backgroundColor = "green";
+                document.getElementById("ins").style.backgroundColor = "green";
+                document.getElementById("inw").style.backgroundColor = "green";
+                document.getElementById("inn").style.backgroundColor = "green";
+                document.getElementById("oute").style.backgroundColor = "green";
+                document.getElementById("outw").style.backgroundColor = "green";
+                document.getElementById("1").style.backgroundColor = "green";
+                document.getElementById("2").style.backgroundColor = "green";
+                document.getElementById("3").style.backgroundColor = "green";
+                document.getElementById("4").style.backgroundColor = "green";
+                document.getElementById("outn").style.backgroundColor = "green";  
+                document.getElementById("outs").style.backgroundColor = "green";      
+        
+            }
+            function north() {
+                resetSignal();
+                document.getElementById("ine").style.backgroundColor="red";
+                document.getElementById("ins").style.backgroundColor="red";
+                document.getElementById("inw").style.backgroundColor="red";
+            }
+            function east() {
+                resetSignal();
+                document.getElementById("ins").style.backgroundColor="red";
+                document.getElementById("inw").style.backgroundColor="red";
+                document.getElementById("inn").style.backgroundColor="red";
+            }
+            function south() {
+                resetSignal();
+                document.getElementById("inw").style.backgroundColor="red";
+                document.getElementById("inn").style.backgroundColor="red";
+                document.getElementById("ine").style.backgroundColor="red";
+            }
+            function west() {
+                resetSignal();
+                document.getElementById("inn").style.backgroundColor="red";
+                document.getElementById("ine").style.backgroundColor="red";
+                document.getElementById("ins").style.backgroundColor="red";
+            }
+        </script>
+    </body>
+    </html>
+</body>
+</html>
